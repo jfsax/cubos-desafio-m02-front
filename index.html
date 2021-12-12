@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CubosFlix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/spacing.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header flex-row justify-between">
+      <img src="./assets/logo.svg" alt="Logo">
+      <h1 class="header__title">Cubos Flix</h1>
+      <img class="btn-theme" src="./assets/light-mode.svg" alt="Botão de tema">
+    </header>
+    <div class="container flex-column justify-center align-center">
+      <input class="input flex-row mb-4" type="text" placeholder="Pesquisar...">
+      <div class="movies-container flex-row justify-center mb-4">
+        <img class="movies-container--btn btn-prev mr-24" src="./assets/seta-esquerda-preta.svg" alt="Seta esquerda">
+        <div class="movies flex-row align-center justify-center">
+        </div>
+        <img class="movies-container--btn btn-next ml-24" src="./assets/seta-direita-preta.svg" alt="Seta direita">
+      </div>
+      <h2 class="subtitle">Highlight do dia</h2>
+      <div class="highlight flex-row justify-between align-center">
+        <a class="highlight__video-link" href="#" target="_blank">
+          <div class="highlight__video flex-column justify-center align-center">
+            <img src="./assets/play.svg" alt="Play">
+          </div>
+        </a>
+        <div class="highlight__info flex-column justify-center">
+          <div class="highlight__title-rating flex-row justify-between align-center">
+            <h3 class="highlight__title"></h3>
+            <span class="highlight__rating"></span>
+          </div>
+          <div class="highlight__genre-launch">
+            <span class="highlight__genres"></span>
+            /
+            <span class="highlight__launch"></span>
+          </div>
+          <p class="highlight__description">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal flex-column justify-center align-center hidden">
+      <img src="./assets/close.svg" alt="Close" class="modal__close">
+      <h3 class="modal__title mb-4"></h3>
+      <img class="modal__img mb-21">
+      <p class="modal__description">
+      </p>
+      <div class="modal__genre-average flex-row justify-between">
+        <div class="modal__genres flex-row justify-between"></div>
+        <div class="modal__average"></div>
+      </div>
+    </div>
+  </body>
+
+</html>

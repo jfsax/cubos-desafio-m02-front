@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    color: #fff;
+    
+    min-height: 100vh;
+    
+    --transparent-one: rgba(0, 0, 0, 0.8);
+
+    --primary-color: #584d96;
+    --secondary-color: #f9841b;
+    --input-color: #000;
+
+    background-color: var(--background-color);
+}
+
+.header {
+    background-color: var(--primary-color);
+
+    padding: 13px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 1;
+}
+
+.header__title {
+    text-transform: uppercase;
+}
+
+.input {
+    background-color: var(--background-color);
+    border: 1px solid var(--shadow);
+    color: var(--input-color);
+    border-radius: 8px;
+    
+    padding: 0.875rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 30%;
+}
+
+.input::placeholder {
+    color: var(--detail-text-color);
+}
+
+.input:focus {
+    outline: none !important;
+    border: 2px solid var(--secondary-color);
+  }
+
+.container {
+    min-width: 100%;
+    padding: 100px;
+}
+
+.movies-container {
+    min-width: 100%;
+    min-height: auto;
+}
+
+.movies {
+    gap: 24px;
+    min-width: 80%;
+    min-height: auto;
+}
+
+.movie {
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* box-shadow: 0px 0px 5px 2px var(--shadow); */
+    box-shadow: 0px 5px 0px var(--primary-color), 5px 5px 0px var(--secondary-color);
+
+    position: relative;
+    min-width: 168px;
+    min-height: 301px;
+    aspect-ratio: 1/1.7;
+}
+
+.movie:hover {
+    transition: 0.3s;
+    transform: perspective( 600px ) rotateY( 10deg );
+}
+
+.movie__info {
+    background-color: var(--transparent-one);
+    padding: 9px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.movie__rating {
+    font-size: 12px;
+    color: #FBCD6E;
+}
+
+.movie__rating > img {
+    margin-right: 4px;
+}
+
+.movies-container--btn {
+    cursor: pointer;
+    width: 29px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+
+    margin-bottom: 16px;
+}
+
+.highlight {
+    min-width: 81%;
+
+    color: var(--text-color);
+    position: relative;
+    gap: 24px;
+}
+
+.highlight__video {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    min-width: 553px;
+    min-height: 311px;
+}
+
+.highlight__info {
+    width: 360px;
+    height: 311px;
+    padding: 1rem;
+
+    background-color: var(--highlight-color);
+    box-shadow: inset 0px -5px 0px var(--primary-color), inset 0px 5px 0px var(--secondary-color);
+}
+
+.highlight__title {
+    font-weight: bold;
+    font-size: 24px;
+
+    color: var(--secondary-color);
+}
+
+.highlight__title-rating {
+    margin-bottom: 8px;
+}
+
+.highlight__genre-launch {
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    margin-bottom: 36px;
+
+    color: var(--detail-text-color);
+}
+
+.highlight__rating {
+    font-weight: bold;
+    font-size: 24px;
+
+    padding: 2px 11px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+
+    color: #fff;
+}
+
+.highlight__description {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.hidden { display: none; }
+
+.modal {
+    background-color: var(--transparent-one);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    overflow-y: auto;
+}
+
+.modal__close {
+    cursor: pointer;
+    position: absolute;
+
+    top: 56px;
+    right: 56px;
+}
+
+.modal__title {
+    font-size: 36px;
+}
+
+.modal__img, .modal__description {
+    width: 50%;
+}
+
+.modal__description {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+
+    margin-bottom: 20px;
+}
+
+.modal__genre-average {
+    width: 50%;
+}
+
+.modal__genre {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    padding: 9px 11px;
+}
+
+.modal__average {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+
+    padding: 9px 11px;
+}
+
+.btn-theme {
+    cursor: pointer;
+}
